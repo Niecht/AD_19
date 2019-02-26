@@ -23,16 +23,7 @@ public class Aha {
         return calls;
     }
 
-    private static final void task1(){
-        Aha.calls++;
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private static final void task2(){
+    private static void task1(){
         Aha.calls++;
         try {
             Thread.sleep(5);
@@ -41,10 +32,19 @@ public class Aha {
         }
     }
 
-    private static final void task3(){
+    private static void task2(){
         Aha.calls++;
         try {
-            Thread.sleep(1);
+            Thread.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void task3(){
+        Aha.calls++;
+        try {
+            Thread.sleep(5);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
