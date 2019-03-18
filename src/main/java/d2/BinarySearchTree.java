@@ -66,7 +66,8 @@ public class BinarySearchTree implements TreeInterface<BinaryTreeNode>{
         }
     }
 
-    public void insert(BinaryTreeNode insert){
+    @Override
+    public void add(BinaryTreeNode insert){
         if(this.root == null){
             root = insert;
         }
@@ -91,7 +92,8 @@ public class BinarySearchTree implements TreeInterface<BinaryTreeNode>{
 
     }
 
-    public void remove(BinaryTreeNode remove){
+    @Override
+    public void delete(BinaryTreeNode remove){
         if(find(remove.getValue()) != null && remove != root){  //check if value is in tree and if its not root
             BinaryTreeNode parent = this.findParent(remove);
             if(remove.getRightC() == null && remove.getLeftC() == null){
@@ -175,13 +177,4 @@ public class BinarySearchTree implements TreeInterface<BinaryTreeNode>{
         System.out.println(n.getValue());
     }
 
-    @Override
-    public void add(BinaryTreeNode value) {
-        LOG.info("Not supported operation");
-    }
-
-    @Override
-    public void delete(BinaryTreeNode value) {
-        LOG.info("Not supported operation");
-    }
 }

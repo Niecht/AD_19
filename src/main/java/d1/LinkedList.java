@@ -59,7 +59,7 @@ public class LinkedList {
     }
 
     public final Allocation pop(){
-        Allocation temp = head.getValue();
+        Allocation temp = (Allocation) head.getValue();
         head = head.getNext();
         return temp;
     }

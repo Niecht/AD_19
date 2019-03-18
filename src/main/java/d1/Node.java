@@ -3,17 +3,17 @@ package d1;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Node {
-    private Allocation value;
-    private Node next;
+public class Node<T> {
+    private T value;
+    private Node<T> next;
     private static Logger LOG = LogManager.getLogger(Node.class);
 
-    Node (Allocation value, Node next){
+    Node (T value, Node next){
         this.value = value;
         this.next = next;
     }
 
-    Node (Allocation value){
+    Node (T value){
         this.value = value;
         this.next = null;
     }
@@ -31,7 +31,7 @@ public class Node {
         }
     }
 
-    public Allocation getValue() {
+    public T getValue() {
         return this.value;
     }
 
